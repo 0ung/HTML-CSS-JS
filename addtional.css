@@ -35,9 +35,61 @@ nav {
   float: right;
   width: 900px;
   height: 100px;
-  background-color: green;
+  padding-top: 40px;
+}
+ul {
+  list-style: none;
 }
 
+#topMenu {
+  height: 60px;
+}
+
+#topMenu > li {
+  float: left;
+  position: relative;
+}
+
+#topMenu > li > ul {
+  display: none;
+  position: absolute;
+  width: 160px;
+  background-color: rgba(255, 255, 255, 0.6);
+  left: 20px;
+  margin: 0;
+}
+
+#topMenu > li > ul > li {
+  padding: 10px 10px 10px 30px;
+}
+
+#topMenu > li > ul > li > a {
+  font-size: 14px;
+  padding: 10px;
+  color: #000;
+}
+
+#topMenu > li:hover > ul {
+  display: block;
+  z-index: 10;
+}
+
+#topMenu > li > a {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 1px #07c;
+  padding: 20px 60px;
+}
+
+#topMenu > li > a > span {
+  font-size: 0.5em;
+}
+
+#topMenu > li > a:hover {
+  color: #000;
+  text-shadow: 0 -1px #07c;
+}
 #sildeShow {
   clear: both;
   width: 1200px;
