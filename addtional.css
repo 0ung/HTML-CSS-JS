@@ -39,6 +39,7 @@ nav {
 #contents {
   width: 1200px;
   height: 300px;
+  margin-top: 20px;
 }
 
 #tabMenu {
@@ -52,10 +53,48 @@ nav {
   float: right;
   width: 600px;
   height: 100%;
-  background-color: skyblue;
+  margin-top: 15px;
 }
-footer {
+#links ul {
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+#links ul li {
+  float: left;
+  width: 33%;
+  text-align: center;
+  margin: 10px 0;
+}
+#links ul li footer {
   width: 1200px;
   height: 100px;
   background-color: gray;
+}
+
+#quick-icon1 {
+  background-image: url("images/icon-1.jpg");
+}
+#quick-icon2 {
+  background-image: url("images/icon-2.jpg");
+}
+#quick-icon3 {
+  background-image: url("images/icon-3.jpg");
+}
+
+#links ul li a span {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  line-height: 150px;
+}
+
+#links ul li a p {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #666;
 }
