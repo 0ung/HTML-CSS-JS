@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700display=swap");
+
 * {
   margin: 0 auto;
   padding: 0;
@@ -11,16 +13,24 @@
 header {
   width: 1200px;
   height: 100px;
-  background-color: blue;
+  background-color: #07c;
 }
 
 #logo {
   float: left;
   width: 250px;
   height: 100px;
-  background-color: indigo;
+  line-height: 100px;
+  padding-left: 20px;
 }
 
+#logo h1 {
+  font-family: "Merienda", cursive;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 0 -1px 0 #222;
+}
 nav {
   float: right;
   width: 900px;
@@ -58,4 +68,8 @@ footer {
   width: 1200px;
   height: 100px;
   background-color: gray;
+}
+
+a {
+  text-decoration: none;
 }
