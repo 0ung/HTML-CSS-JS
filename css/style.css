@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background: #ffffff;
+  color: #222328;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* css 내용 작성 */
+
+main {
+  width: 1200px;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #723ffb;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.logo {
+  width: 20%;
+  height: 40px;
+}
+
+.logo > img {
+  width: 200px;
+  height: 40px;
+  margin-left: 10%;
+}
+
+.mainMenu {
+  width: 800px;
+  height: 100%;
+  display: flex;
+  float: right;
+}
+
+.mainMenu > li {
+  margin-top: 75px;
+  width: 200px;
+  height: 100px;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.drillDown {
+  display: none;
+}
+
+.imgSlide > img {
+  position: absolute;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.drillDown > li {
+  position: relative;
+  margin-top: 30px;
+  background-color: #ffffff;
+}
