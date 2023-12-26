@@ -1,44 +1,3 @@
-window.onload = function () {
-  // 이미지 슬라이드 구현
-  showSlides();
-
-  // javascript 내용 작성
-};
-
-function showSlides() {
-  // showSlides 함수 내용 작성
-}
-
-function downItem(id, n) {
-  document.getElementById(id).addEventListener("mouseover", () => {
-    const item = document.querySelectorAll(".drillDown");
-    item[n].style.display = "block";
-  });
-  document.getElementById(id).addEventListener("mouseout", () => {
-    const item = document.querySelectorAll(".drillDown");
-    item[n].style.display = "none";
-  });
-}
-function extractIds() {
-  const menuItems = document.querySelectorAll(".mainMenu > li");
-  const ids = [];
-
-  menuItems.forEach((item) => {
-    const id = item.getAttribute("id");
-    if (id) {
-      ids.push(id);
-    }
-  });
-
-  return ids;
-}
-function autoDrillDown() {
-  const ids = extractIds();
-  for (var i = 0; i < ids.length; i++) {
-    downItem(ids[i], i);
-  }
-}
-
 function autoSlideShow() {
   const urlLocation = document.querySelectorAll(".imgSlide1");
   let num = 0;
@@ -65,5 +24,42 @@ function autoSlideShow() {
   setNextImageStyle();
 }
 
-autoDrillDown();
+function TabMenu() {
+  const TabMenu = document.getElementsByClassName("TabMenuA");
+  const notice = document.getElementById("notice");
+  const gallery = document.getElementById("gallery");
+
+  TabMenu[0].addEventListener("click", () => {
+    notice.style.display = "block";
+    gallery.style.display = "none";
+    TabMenu[0].style.backgroundColor = "white";
+    TabMenu[1].style.backgroundColor = "#eeeeee";
+  });
+
+  TabMenu[1].addEventListener("click", () => {
+    gallery.style.display = "block";
+    notice.style.display = "none";
+    TabMenu[1].style.backgroundColor = "white";
+    TabMenu[0].style.backgroundColor = "#eeeeee";
+  });
+}
+
+function noticeModal() {
+  const notice = document.getElementById("firstLi");
+  const modal = document.getElementById("modalWrap");
+  notice.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
+}
+function closeModal() {
+  const close = document.getElementById("close");
+  close.addEventListener("click", () => {
+    const modal = document.getElementById("modalWrap");
+    modal.style.display = "none";
+  });
+}
+
 autoSlideShow();
+TabMenu();
+noticeModal();
+closeModal();
