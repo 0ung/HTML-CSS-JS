@@ -1,0 +1,37 @@
+.sideBar {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.sideBar a:not(.sideSub a) {
+  border: 0px solid black;
+  padding: 20px;
+}
+
+.sideSub {
+  display: none;
+}
+.sideSub li {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.sideBar > li:hover > .sideSub {
+  display: block;
+  background-color: beige;
+  opacity: 0.7;
+}
+
+.sideBar > li:hover > a {
+  background-color: black;
+  color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.sideSub > li:hover > a {
+  background-color: black;
+  color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+}

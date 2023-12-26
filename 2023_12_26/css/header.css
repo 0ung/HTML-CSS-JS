@@ -1,0 +1,94 @@
+#logo {
+  width: 20%;
+  height: 100%;
+  font-size: 60px;
+}
+header ul {
+  display: flex;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+.MainMenu {
+  width: 800px;
+  height: 100%;
+  display: flex;
+  float: right;
+}
+
+.MainMenu > li {
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+}
+.subMenu > li {
+  line-height: 50px;
+}
+
+.subMenu {
+  display: none;
+}
+
+.MainMenu > li:hover > .subMenu {
+  display: block;
+  background-color: #f2f2f2;
+  opacity: 0.7;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 0.7;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.sideBar {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.sideBar a:not(.sideSub a) {
+  border: 0px solid black;
+  padding: 20px;
+}
+
+.sideSub {
+  display: none;
+}
+.sideSub li {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.sideBar > li:hover > .sideSub {
+  display: block;
+  background-color: beige;
+  opacity: 0.7;
+  z-index: 3px;
+}
+
+.sideBar > li:hover > a {
+  background-color: black;
+  color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  z-index: 3px;
+}
+
+.sideSub > li:hover > a {
+  background-color: black;
+  color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  z-index: 3px;
+}
