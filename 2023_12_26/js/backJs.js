@@ -5,12 +5,15 @@ window.onload = () => {
 };
 function changeImg() {
   const urlLocation = document.querySelectorAll(".asd");
+  const spanLocation = document.querySelectorAll(".asd1");
   var i = 0;
   function setNext() {
     if (i < urlLocation.length) {
       urlLocation[i].style.opacity = 1;
+      spanLocation[i].style.opacity = 1;
       setTimeout(() => {
         urlLocation[i].style.opacity = 0;
+        spanLocation[i].style.opacity = 0;
         i++;
         setNext();
       }, 3000);

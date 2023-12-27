@@ -13,6 +13,19 @@
   transition: opacity 1s;
   z-index: -1;
 }
+
+#imageSlide > span {
+  font-size: 30px;
+  background-color: rgba(240, 248, 255, 0.301);
+  padding: 20px;
+  top: 230px;
+  left: 550px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1s;
+  color: #000000a4;
+}
+
 /* 배너 */
 #tabMenu {
   width: 100%;
@@ -25,7 +38,7 @@
 #banner {
   width: 33.3%;
   height: 200px;
-  background: url("/resource/photo-1.jpg");
+  background: url("/resource/Contents/banner/banner.jpg");
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -45,7 +58,7 @@
 #direct {
   width: 33.3%;
   height: 200px;
-  background: url("/resource/photo-2.jpg");
+  background: url("/resource/Contents/direct/direct.jpg");
 }
 
 #direct a {
