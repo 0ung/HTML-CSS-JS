@@ -5,7 +5,7 @@
 
 body {
   width: 1200px;
-  height: 100vh;
+  height: 800px;
 }
 
 header {
@@ -29,9 +29,13 @@ aside {
   height: 100%;
   width: 180px;
   background-color: beige;
-  position: fixed;
+  position: absolute;
 }
 
 footer {
   height: 10%;
+  margin-left: 180px;
+  display: flex;
+  justify-content: space-around;
+  background-color: bisque;
 }

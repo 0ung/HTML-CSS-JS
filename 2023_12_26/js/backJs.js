@@ -1,5 +1,7 @@
 window.onload = () => {
   changeImg();
+  noticeAndGallery();
+  modal();
 };
 function changeImg() {
   const urlLocation = document.querySelectorAll(".asd");
@@ -21,24 +23,41 @@ function changeImg() {
   setNext();
 }
 
-function noticeBtn() {
-  const noticeHtml = document.createElement("div");
-  const notices = document.getElementById("notices");
+function noticeAndGallery() {
+  const notice = document.getElementById("notice");
+  const gallery = document.getElementById("gallery");
+  const noticeBtn = document.getElementById("noticeBtn");
+  const galleryBtn = document.getElementById("galleryBtn");
 
-  noticeHtml.innerHTML =
-    "<ul><li>1.공지사항</li><li>2.공지사항</li><li>3.공지사항</li><li>4.공지사항</li></ul>";
-  if (notices.childNodes != null) {
-  } else {
-    document.getElementById("notices").appendChild(noticeHtml);
-  }
+  noticeBtn.addEventListener("click", () => {
+    notice.style.display = "block";
+    gallery.style.display = "none";
+    noticeBtn.style.backgroundColor = "black";
+    noticeBtn.style.color = "white";
+    galleryBtn.style.backgroundColor = " #ccc";
+    galleryBtn.style.color = "blueviolet";
+  });
+
+  galleryBtn.addEventListener("click", () => {
+    notice.style.display = "none";
+    gallery.style.display = "block";
+    galleryBtn.style.backgroundColor = "black";
+    galleryBtn.style.color = "white";
+    noticeBtn.style.backgroundColor = "#ccc";
+    noticeBtn.style.color = "blueviolet";
+  });
 }
-function galleryBtn() {
-  const noticeGallery = document.createElement("div");
-  const notices = document.getElementById("notices");
-  noticeGallery.innerHTML =
-    "<ul><li><img src='/resource/icon-1.jpg'></li><li><img src='/resource/icon-2.jpg'></li><li><img src='/resource/icon-3.jpg'></li></ul>";
-  if (notices.childNodes != null) {
-  } else {
-    document.getElementById("notices").appendChild(noticeGallery);
-  }
+
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
+
+function modal() {
+  const modal = document.getElementById("modal");
+  const notice = document.getElementById("firstNotice");
+
+  notice.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
 }
